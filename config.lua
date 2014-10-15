@@ -61,3 +61,19 @@ function create_interceptor()
 end
 register_object_factory( "interceptor", create_interceptor )
 
+
+function create_tremulous_ship()
+  return yarrrconfig.create_ship(
+    {
+      Tile.new( TileCoordinate.new( -1, 0 ), TileCoordinate.new( 2, 0 ) ),
+      Tile.new( TileCoordinate.new( 1, 1 ), TileCoordinate.new( 1, 1 ) ),
+      Tile.new( TileCoordinate.new( 1, -1 ), TileCoordinate.new( 1, -1 ) )
+    },
+    {
+      Thruster.new( main_thruster, TileCoordinate.new( 2, 0 ), yarrrconfig.degrees( 0 ) ),
+      Thruster.new( port_thruster, TileCoordinate.new( -1, 0 ), yarrrconfig.degrees( 270 ) ),
+      Thruster.new( starboard_thruster, TileCoordinate.new( -1, 0 ), yarrrconfig.degrees( 90 ) ),
+      Canon.new( TileCoordinate.new( 2, 0 ) ),
+    })
+end
+register_object_factory( "tremulous", create_tremulous_ship )
