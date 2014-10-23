@@ -112,9 +112,9 @@ function create_bike( bike )
       Tile.new( TileCoordinate.new( 6, 4 ), TileCoordinate.new( 7, 4) ),
     },
     {
-      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), yarrrconfig.degrees( 180 ) ),
-      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), yarrrconfig.degrees( 180 ) ),
-      Canon.new( TileCoordinate.new( 2, 1 ), yarrrconfig.degrees( 0 ) ),
+      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), degrees( 180 ) ),
+      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), degrees( 180 ) ),
+      Canon.new( TileCoordinate.new( 2, 1 ), degrees( 0 ) ),
     })
 end
 
