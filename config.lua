@@ -89,3 +89,34 @@ function create_tremulous_ship( tremulous_ship )
 end
 register_object_factory( "tremulous", create_tremulous_ship )
 
+function create_bike( bike )
+  yarrrconfig.create_ship(
+    bike,
+    {
+      -- left tire
+      Tile.new( TileCoordinate.new( 0, 0 ), TileCoordinate.new( 0, -1 ) ),
+      Tile.new( TileCoordinate.new( 1, 1 ), TileCoordinate.new( 2, 1 ) ),
+      Tile.new( TileCoordinate.new( 3, 0 ), TileCoordinate.new( 3, -1 ) ),
+      Tile.new( TileCoordinate.new( 1, -2 ), TileCoordinate.new( 2, -2 ) ),
+      -- right tire
+      Tile.new( TileCoordinate.new( 6, 0 ), TileCoordinate.new( 6, -1 ) ),
+      Tile.new( TileCoordinate.new( 7, 1 ), TileCoordinate.new( 8, 1 ) ),
+      Tile.new( TileCoordinate.new( 9, 0 ), TileCoordinate.new( 9, -1 ) ),
+      Tile.new( TileCoordinate.new( 7, -2 ), TileCoordinate.new( 8, -2 ) ),
+      -- stem, seat and tubes from left to right
+      Tile.new( TileCoordinate.new( 3, 2 ), TileCoordinate.new( 3, 2 ) ),
+      Tile.new( TileCoordinate.new( 3, 4 ), TileCoordinate.new( 3, 4) ),
+      Tile.new( TileCoordinate.new( 4, 3 ), TileCoordinate.new( 4, 3) ),
+      Tile.new( TileCoordinate.new( 5, 2 ), TileCoordinate.new( 5, 2 ) ),
+      Tile.new( TileCoordinate.new( 6, 3 ), TileCoordinate.new( 6, 3) ),
+      Tile.new( TileCoordinate.new( 6, 4 ), TileCoordinate.new( 7, 4) ),
+    },
+    {
+      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), yarrrconfig.degrees( 180 ) ),
+      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), yarrrconfig.degrees( 180 ) ),
+      Canon.new( TileCoordinate.new( 2, 1 ), yarrrconfig.degrees( 0 ) ),
+    })
+end
+
+register_object_factory( "bike", create_bike )
+
