@@ -53,10 +53,17 @@ function create_interceptor( interceptor )
     {
       Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), degrees( 180 ) ),
       Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), degrees( 180 ) ),
-      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), degrees( 180 ) ),
-      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), degrees( 180 ) ),
+      Thruster.new( main_thruster, TileCoordinate.new( 0, 1 ), degrees( 180 ) ),
+      Thruster.new( main_thruster, TileCoordinate.new( 0, -1 ), degrees( 180 ) ),
+
       Thruster.new( port_thruster, TileCoordinate.new( 4, 0 ), degrees( 90 ) ),
+      Thruster.new( port_thruster, TileCoordinate.new( 4, 0 ), degrees( 90 ) ),
+      Thruster.new( port_thruster, TileCoordinate.new( 3, 0 ), degrees( 90 ) ),
+
       Thruster.new( starboard_thruster, TileCoordinate.new( 4, 0 ), degrees( 270 ) ),
+      Thruster.new( starboard_thruster, TileCoordinate.new( 4, 0 ), degrees( 270 ) ),
+      Thruster.new( starboard_thruster, TileCoordinate.new( 3, 0 ), degrees( 270 ) ),
+
       Canon.new( TileCoordinate.new( 1, -1 ), degrees( 0 ) ),
       Canon.new( TileCoordinate.new( 2, 0 ), degrees( 0 ) ),
       Canon.new( TileCoordinate.new( 1, 1 ), degrees( 0 ) ),
