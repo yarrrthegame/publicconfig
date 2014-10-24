@@ -112,9 +112,21 @@ function create_bike( bike )
       Tile.new( TileCoordinate.new( 6, 4 ), TileCoordinate.new( 7, 4) ),
     },
     {
-      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), degrees( 180 ) ),
-      Thruster.new( main_thruster, TileCoordinate.new( -1, 0 ), degrees( 180 ) ),
-      Canon.new( TileCoordinate.new( 2, 1 ), degrees( 0 ) ),
+      Thruster.new( main_thruster, TileCoordinate.new( 10, 0 ), degrees( 0 ) ),
+      Thruster.new( main_thruster, TileCoordinate.new( 10, 1 ), degrees( 0 ) ),
+
+      Thruster.new( port_thruster, TileCoordinate.new( 2, 0 ), degrees( 90 ) ),
+      Thruster.new( starboard_thruster, TileCoordinate.new( 2, 0 ), degrees( 270 ) ),
+      Canon.new( TileCoordinate.new( 2, -1 ), degrees( 184 ) ),
+      Canon.new( TileCoordinate.new( 2, -1 ), degrees( 183 ) ),
+      Canon.new( TileCoordinate.new( 2, -1 ), degrees( 182 ) ),
+      Canon.new( TileCoordinate.new( 2, 0 ), degrees( 181 ) ),
+      Canon.new( TileCoordinate.new( 2, 1 ), degrees( 180 ) ),
+      Canon.new( TileCoordinate.new( 2, 2 ), degrees( 179 ) ),
+      Canon.new( TileCoordinate.new( 2, 3 ), degrees( 178 ) ),
+      Canon.new( TileCoordinate.new( 2, 3 ), degrees( 177 ) ),
+      Canon.new( TileCoordinate.new( 2, 3 ), degrees( 176 ) ),
+
     })
 end
 
