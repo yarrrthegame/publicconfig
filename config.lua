@@ -1,3 +1,4 @@
+package.path = lua_configuration_path .. "/yarrrconfig/src/?.lua;"
 local yarrrconfig = require( "yarrrconfig" )
 
 function create_duck( duck )

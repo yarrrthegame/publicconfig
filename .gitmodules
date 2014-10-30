@@ -1,0 +1,3 @@
+[submodule "yarrrconfig"]
+	path = yarrrconfig
+	url = https://github.com/yarrrthegame/yarrrconfig.git

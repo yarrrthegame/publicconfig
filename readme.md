@@ -1,6 +1,12 @@
 # Introduction
 
-This is the public configuration of the yarrr server.
+This is the public configuration of the yarrr server. After cloning the repository or updating your
+working copy, make sure to update submodules to the latest version by executing the following commands.
+
+~~~ bash
+git submodule init
+git submodule update
+~~~
 
 # Create your own ship
 
