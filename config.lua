@@ -20,7 +20,7 @@ function create_duck( duck )
     })
 end
 
-register_object_factory( "duck", create_duck )
+object_factory.register_factory( "duck", create_duck )
 
 function create_basic_ship( ship )
   yarrrconfig.create_ship(
@@ -37,7 +37,7 @@ function create_basic_ship( ship )
       Canon.new( TileCoordinate.new( 2, 0 ), degrees( 0 ) ),
     })
 end
-register_object_factory( "ship", create_basic_ship )
+object_factory.register_factory( "ship", create_basic_ship )
 
 function create_interceptor( interceptor )
   yarrrconfig.create_ship(
@@ -70,7 +70,7 @@ function create_interceptor( interceptor )
       Canon.new( TileCoordinate.new( 1, 1 ), degrees( 0 ) ),
     })
 end
-register_object_factory( "interceptor", create_interceptor )
+object_factory.register_factory( "interceptor", create_interceptor )
 
 
 function create_tremulous_ship( tremulous_ship )
@@ -88,7 +88,7 @@ function create_tremulous_ship( tremulous_ship )
       Canon.new( TileCoordinate.new( -1, 0 ), degrees( 180 ) ),
     })
 end
-register_object_factory( "tremulous", create_tremulous_ship )
+object_factory.register_factory( "tremulous", create_tremulous_ship )
 
 function create_bike( bike )
   yarrrconfig.create_ship(
@@ -131,7 +131,7 @@ function create_bike( bike )
     })
 end
 
-register_object_factory( "bike", create_bike )
+object_factory.register_factory( "bike", create_bike )
 
 function create_airtou( airtou )
   yarrrconfig.create_ship(
@@ -155,5 +155,5 @@ function create_airtou( airtou )
     })
 end
 
-register_object_factory( "airtou", create_airtou )
+object_factory.register_factory( "airtou", create_airtou )
 
