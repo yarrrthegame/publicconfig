@@ -10,12 +10,19 @@ git submodule update
 
 # Create your own ship
 
-Have a look at the design of the ship you all know already.
+Each ship design is stored in a separate file under the ships folder. The name of the file defines the
+ship name using the following pattern: *<ship type>.lua*.  The easiest way to start a new ship is to
+make a copy of *ships/ship.lua* . This file defines the default ship that you start with in the game.
+Let's have a look at it.
 
 ~~~ lua
 
-function create_basic_ship()
-  return yarrrconfig.create_ship(
+t = {}
+local yarrrconfig = require( "yarrrconfig" )
+
+function t.create( ship )
+  yarrrconfig.create_ship(
+    ship,
     {
       Tile.new( TileCoordinate.new( -1, 0 ), TileCoordinate.new( 2, 0 ) ),
       Tile.new( TileCoordinate.new( 0, 1 ), TileCoordinate.new( 0, 1 ) ),
@@ -28,7 +35,8 @@ function create_basic_ship()
       Canon.new( TileCoordinate.new( 2, 0 ), degrees( 0 ) ),
     })
 end
-register_object_factory( "ship", create_basic_ship )
+
+return t
 
 ~~~
 
@@ -56,19 +64,19 @@ Item types:
  * thruster( activation key, place on ship, orientation )
  * canon( place on ship, orientation )
 
-## Register to the object factory
+## Registering your ship to the object factory
 
 ~~~ lua
-register_object_factory( "ship", create_basic_ship )
+ship.register( { "duck", "ship", .... } )
 ~~~
-The code above registers the *create_basic_ship* function as the factory of type *ship*.
-
+Just add the name of your ship to the line above in *config.lua*.
 
 ## Trying out your ship
 Add your design to *config.lua* and send me a pull request. When I merge your modifications it is deployed
 to the server and you can try it out by typing the following command in the terminal of a running client.
 
 ~~~ yarrr
-/request_ship <ship type>
+/ship list
+/ship request <ship type>
 ~~~
 
