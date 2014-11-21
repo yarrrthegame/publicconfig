@@ -8,12 +8,14 @@ git submodule init
 git submodule update
 ~~~
 
-# Create your own ship
+# Ships
+
+## Create your own ship
 
 Each ship design is stored in a separate file under the ships folder. The name of the file defines the
-ship name using the following pattern: *<ship type>.lua*.  The easiest way to start a new ship is to
+ship name using the following pattern: *ship_type.lua*.  The easiest way to start a new ship is to
 make a copy of *ships/ship.lua* . This file defines the default ship that you start with in the game.
-Let's have a look at it.
+Have a look at it.
 
 ~~~ lua
 
