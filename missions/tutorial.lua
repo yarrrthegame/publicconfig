@@ -7,7 +7,7 @@ function add_random_checkpoint( mission )
     x = math.random( -1000, 1000 ),
     y = math.random( -1000, 1000 ) }
 
-  local till = os.time() + 300;
+  local till = universe_time() + 300;
   mission:add_objective( MissionObjective.new( "Go to position: ".. destination.x .. ", ".. destination.y .. " until " .. os.date( "%T", till ),
     function( mission_id )
       return yc.checkpoint( mission_id, destination, 100, till )
