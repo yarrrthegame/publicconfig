@@ -12,7 +12,7 @@ function add_random_checkpoint( mission )
   mission:add_objective( MissionObjective.new(
     "Your last objective is to navigate the ship to position ".. destination.x .. ", ".. destination.y .. " until " .. os.date( "!%T", till ),
     function( m )
-      return yc.checkpoint( m:id(), destination, 100, till )
+      return yc.checkpoint( m, destination, 100, till )
     end ) )
 end
 
@@ -23,7 +23,7 @@ function add_speed_check( mission )
     yc.wrap_updater(
       function() end,
       function( m )
-        if ( not yc.is_slower_than( 50, yc.ship_of_mission( m:id() ) ) ) then
+        if ( not yc.is_slower_than( 50, yc.ship_of( m ) ) ) then
           return succeeded
         end
         return ongoing
@@ -42,7 +42,7 @@ function add_rotation_check( mission )
     yc.wrap_updater(
       function() end,
       function( m )
-        angular_velocity = yc.ship_of_mission( m:id() ).angular_velocity
+        angular_velocity = yc.ship_of( m ).angular_velocity
         if ( angular_velocity ~= 0 ) then
           return succeeded
         end
@@ -61,7 +61,7 @@ function add_stop_check( mission )
     yc.wrap_updater(
       function() end,
       function( m )
-        if yc.is_slower_than( 10, yc.ship_of_mission( m:id() ) ) then
+        if yc.is_slower_than( 10, yc.ship_of( m ) ) then
           return succeeded
         end
         return ongoing
