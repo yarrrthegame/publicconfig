@@ -4,5 +4,5 @@ local ship = require( "ships" )
 ship.register( { "duck", "ship", "interceptor", "tremulous", "bike", "airtou" } )
 
 local mission = require( "missions" )
-mission.register( { "tutorial" } )
+mission.register( { "tutorial", "tutorial_2" } )
 
