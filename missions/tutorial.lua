@@ -79,12 +79,12 @@ end
 function t.create( mission )
   yc.add_instruction(
     mission,
-    "Welcome to you first tutorial mission.  I will guide you through the basics of ship movement." )
+    "Welcome to your first tutorial mission.  I will guide you through the basics of ship movement." )
 
   add_speed_check( mission )
 end
 
-mission_factory.register_factory( MissionInfo.new( "tutorial", "First tutorial to show you the basics." ), t.create )
+mission_factory.register_factory( MissionInfo.new( "tutorial", "First tutorial, basics of ship movement." ), t.create )
 
 return t
 
