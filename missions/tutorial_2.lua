@@ -27,6 +27,7 @@ function add_duck_with_decorator( mission, decorator )
   object_factory.create_object( "duck", function( duck )
     duck:move_to( yc.coordinate_from( yc.random_location_around( { x=0, y=0 }, 1000 ) ) )
     decorator( duck )
+    duck:add_behavior( ObjectIdentity.new( "Imperial Duck" ) )
     duck:add_behavior( CallWhenDestroyed.new( LuaFunction.new( function()
       context.number_of_living_ducks = context.number_of_living_ducks - 1
     end ) ) )
