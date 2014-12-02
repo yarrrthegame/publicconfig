@@ -96,8 +96,13 @@ end
 
 function add_standing_duck( mission )
 
+  yc.add_instruction( mission,
+  [===[You can use the radar to find objects around you.  Green dots represent objects,  light blue lines show their relative velocity to your ship.]===] )
+  yc.add_instruction( mission,
+  [===[If the line points to the center of the radar, it means you are on collision course.  Don't forget to slow down before getting too close.]===] )
+
   yc.add_objective_to( mission, {
-    description = "I have sent an imperial robot duck to shoot at.  Use the radar on the bottom right of your screen to find it. Keep firing at it until it explodes.",
+    description = "I have sent an imperial robot duck to shoot at.  Keep firing at it until it explodes.",
     setup = function( mission )
       add_duck_with_decorator( mission, function( duck ) end )
     end,
