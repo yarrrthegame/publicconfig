@@ -98,7 +98,7 @@ end
 function add_standing_duck( mission )
 
   yc.add_instruction( mission,
-  [===[You can use the radar to find objects around you.  Green dots represent objects,  light blue lines show their relative velocity to your ship.]===] )
+  [===[You can use the radar to find objects around you.  Dots represent objects,  light blue lines show their relative velocity to your ship.]===] )
   yc.add_instruction( mission,
   [===[If the line points to the center of the radar, it means you are on collision course.  Don't forget to slow down before getting too close.]===] )
 
