@@ -43,11 +43,11 @@ function t.create( ship )
       Thruster.new(main_thruster, TileCoordinate.new(-3, -4), degrees(180)),
       Thruster.new(main_thruster, TileCoordinate.new(-2, -4), degrees(180)),
 
-      Thruster.new(port_thruster, TileCoordinate.new(-5, 4), degrees(90)),
-      Thruster.new(port_thruster, TileCoordinate.new(-6, 4), degrees(90)),
+      Thruster.new(starboard_thruster, TileCoordinate.new(-5, 4), degrees(90)),
+      Thruster.new(starboard_thruster, TileCoordinate.new(-6, 4), degrees(90)),
 
-      Thruster.new(starboard_thruster, TileCoordinate.new(-5, -4), degrees(270)),
-      Thruster.new(starboard_thruster, TileCoordinate.new(-6, -4), degrees(270)),
+      Thruster.new(port_thruster, TileCoordinate.new(-5, -4), degrees(270)),
+      Thruster.new(port_thruster, TileCoordinate.new(-6, -4), degrees(270)),
 
       -- phaser
       Canon.new(TileCoordinate.new(6, -4), degrees(345)),
