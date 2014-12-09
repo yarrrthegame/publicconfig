@@ -39,21 +39,6 @@ function push_duck( duck )
   duck:set_velocity( yc.coordinate_from( yc.random_location_around( { x=0, y=0 }, 500 ) ) )
 end
 
-function go_home( mission )
-  local till = universe_time() + 300;
-
-  yc.add_objective_to( mission, {
-
-    description = "Go to position 0, 0 until " .. os.date( "!%T", till ) .. " to finish the training.",
-
-    updater = function( mission )
-      return yc.checkpoint( mission, { x=0, y=0 }, 1000, till )
-    end
-
-  } )
-
-end
-
 function add_final_hunt( mission )
   yc.add_objective_to( mission, {
     description = "Shoot down two more!",
@@ -69,7 +54,7 @@ function add_final_hunt( mission )
       yc.add_instruction(
       mission,
       "Good job!  Your basic space battle training is over now, but remember: Real pirates shoot back!" )
-      go_home( mission );
+      yc.go_home( mission );
     end
 
   } )
