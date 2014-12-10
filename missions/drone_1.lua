@@ -81,7 +81,7 @@ end
 
 function add_mining_drones( mission )
   local center_of_drones = yc.random_location_around( { x=0, y=0 }, 10000 )
-  yc.add_instruction( mission, "Go to the last reported location of a pack of mining drones is." )
+  yc.add_instruction( mission, "Go to the last reported location of a pack of mining drones." )
   add_mining_drone( mission, center_of_drones )
   add_mining_drone( mission, center_of_drones )
   add_mining_drone( mission, center_of_drones )
