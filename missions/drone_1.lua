@@ -82,16 +82,11 @@ end
 function add_mining_drones( mission )
   local center_of_drones = yc.random_location_around( { x=0, y=0 }, 10000 )
   yc.add_instruction( mission, "Go to the last reported location of a pack of mining drones." )
-  add_mining_drone( mission, center_of_drones )
-  add_mining_drone( mission, center_of_drones )
-  add_mining_drone( mission, center_of_drones )
-  add_mining_drone( mission, center_of_drones )
-  add_mining_drone( mission, center_of_drones )
-  add_mining_drone( mission, center_of_drones )
-  add_mining_drone( mission, center_of_drones )
-  add_mining_drone( mission, center_of_drones )
-  add_mining_drone( mission, center_of_drones )
-  add_mining_drone( mission, center_of_drones )
+
+  for i=1, 10 do
+    add_mining_drone( mission, center_of_drones )
+  end
+
   yc.go_to( mission, center_of_drones, function( mission )
     yc.add_instruction( mission, "Interesting.  It seems they completely went haywire.  Collect as much data as you can." )
     stay_in_position_for( "Stay in position for 45 seconds,  while the instruments record enough data.", mission, center_of_drones, 15, function( mission )
