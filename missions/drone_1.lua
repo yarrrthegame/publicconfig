@@ -108,8 +108,7 @@ end
 
 
 function t.create( mission )
-  yc.add_instruction( mission, "Welcome pilot.  Lately many mining companies complained that their drones stopped responding." )
-  yc.add_instruction( mission, "It is your duty to fly out and have a look at them." )
+  yc.add_instruction( mission, "Welcome pilot.  Lately many mining companies complained that their drones stopped responding. It is your duty to fly out and have a look at them." )
   add_mining_drones( mission )
 end
 

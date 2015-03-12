@@ -30,8 +30,7 @@ function add_speed_check( mission )
     end,
 
     teardown = function( m )
-      yc.add_instruction( m, "Great! As you can see after an impulse your ship is drifting in a straight line." )
-      yc.add_instruction( m, "\"An object either remains at rest or continues to move at a constant velocity, unless acted upon by an external force.\", Newton" )
+      yc.add_instruction( m, "Great! As you can see after an impulse your ship is drifting in a straight line.  \"An object either remains at rest or continues to move at a constant velocity, unless acted upon by an external force.\", Newton" )
       add_rotation_check( m )
     end } )
 

@@ -83,11 +83,6 @@ end
 
 function add_standing_duck( mission )
 
-  yc.add_instruction( mission,
-  [===[You can use the radar to find objects around you.  Dots represent objects,  light blue lines show their relative velocity to your ship.]===] )
-  yc.add_instruction( mission,
-  [===[If the line points to the center of the radar, it means you are on collision course.  Don't forget to slow down before getting too close.]===] )
-
   yc.add_objective_to( mission, {
     description = "I have sent an imperial robot duck to shoot at.  Keep firing at it until it explodes.",
     setup = function( mission )
@@ -105,11 +100,7 @@ end
 function t.create( mission )
   yc.add_instruction(
     mission,
-    "Welcome to your second tutorial mission.  I will guide you through the basics of space combat this time." )
-
-  yc.add_instruction(
-    mission,
-    "The basic ship is equiped with a single canon facing the same direction as the ship.  You can activate it by pressing the LEFT CONTROL button." )
+  [===[Welcome to your second tutorial mission.  I will guide you through the basics of space combat this time.  The basic ship is equiped with a single canon facing the same direction as the ship.  You can activate it by pressing the LEFT CONTROL button.  You can use the radar to find objects around you.  Dots represent objects,  light blue lines show their relative velocity to your ship.  If the line points to the center of the radar, it means you are on collision course.  Don't forget to slow down before getting too close.]===] )
 
   add_standing_duck( mission )
 end
